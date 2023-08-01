@@ -99,34 +99,5 @@ The strategy will start from provocation, the models have been structured and co
 
 ## Video Presentation <a id="32"></a>
 
-https://www.youtube.com/watch?v=hngbtYXGcd8
-
-
-<!-- # Architectural Overview 
-Lucid[ML] consists of two parts, the frontend streamlit app (/streamlit_app) and the backend (/src)
-
-## Frontend
-Entrypoint to the streamlit app is the streamlit_app/main.py file. All frontend pages inherit from the page class (page.py). All implemented XAI Algorithms (currently SHAP, LucidSHAP, LIME, local/global surrogate) have a custom page class, which are invoked - post to uploading a dataset and corresponding model - through clicking on them in the menu on the left side of the application. The main.py file then opens the selected page.
-
-When starting the application, the user must upload the dataset and corresponding trained model file as well as input information about the problem formulation on the DataUpload page. Lucid also enables the import and export of states through the StateManagement page. Once initiliased, the pages for all available explanations are shown in the menu on the left.
-
-## State
-The current state (dataset, model and all other information that are relevant for the explanations) is saved in the streamlit session state, and can be accessed on every class inheriting from page with the get_state() function.
-Once a dataset and model is uploaded, the state is initialized, and all explanation algorithms are run. The results are then stored in the state object, so as to not calculate them again.
-
-## Connection between frontend and backend
-User interaction between frontend and backend is handled in the Handler Classes in the src folder. e.g. HandlerTab.py for Tabular Data and HandlerImage.py for Image data. 
-\
-The Handler Class acts as an api between front and backend. As soon as a dataset is uploaded, an object of the corresponding Handler Class for the dataset is initiliazed, and stored as an instance variable in said dataset object. \
-Example: A tabular dataset is uploaded. The State object is therefore initialized with a "LoadedDataset" object (found in streamlit_app/state.py), which contains an instance of the class HandlerTab(found in src/handler_tab.py), which communicates with the backend.
-
-## Backend
-The calculations for the XAI Algorithms in the backend are done in their corresponding folders (e.g. "shapley_approximation" for shapley, local_lime for lime etc.)
-Here are some of the Algorithms that are used:
-1. Local Interpretable Model-agnostic Explanations (LIME): LIME fits an explainable Model around the point of a decision by a blackbox model. By analyzing the input/output relationship of the blackbox model around that point, it can explain individual decisions of a model, without knowing anything about the inner workings of it (therefore model-agnostic).
-2. Global Surrogate Mode: Similar to LIME, but instead of fitting an explainable Model around a certain decision, it fits an explainable model globally.
-3. Shapley Additive ExPlanation (SHAP): unified approach to fitting a linear model around an observation instance to model the relationship between input and output. For 
-4. Lucid SHAP: extends the SHAP explainer model, by disregarding the assumption of feature independence. This is achieved by creating baseline samples from conditional inference trees.
-
-<br/> -->
+[Watch the video](https://www.youtube.com/watch?v=hngbtYXGcd8)
 
